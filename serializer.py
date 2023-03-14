@@ -29,7 +29,7 @@ class ReviewSerializer(serializers.ModelSerializer):
 class Review_id_Serializer(serializers.ModelSerializer):
     class Meta:
         model = Review
-        fields = ['id']
+        fields = ['id', 'text', 'movie', 'stars']
 
 class MovieSerializer(serializers.ModelSerializer):
     movie_reviews = ReviewSerializer(many=True)
